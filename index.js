@@ -4,6 +4,7 @@ require("dotenv").config();//Para usar variaveis de ambiente do arquivo .env
 const app = express();
 const routerClients = require("./routes/clients")
 const routerProducts = require("./routes/products")
+const routerUsers = require("./routes/users")
 
 const port = process.env.PORT || 3001;  
 // Usando variaveis de ambiente no lugar (arquivo .env)
@@ -16,6 +17,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 app.use("/clients-api", routerClients)
 app.use("/products-api", routerProducts)
+app.use("/users-api", routerUsers)
 
 
 app.listen(port, function(){

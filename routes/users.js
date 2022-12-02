@@ -1,10 +1,11 @@
 const {Router} = require("express")
 const router = Router()
-// const {} = require("../controllers/usersController")
+const {funcaoUsers, postUsers, deleteUsers, updateUsers} = require("../controllers/usersController")
 
-router.get("/users", verificarUsers)
+router.get("/users", funcaoUsers)
 router.post("/users", postUsers)
 router.delete("/users/:id", deleteUsers)
 router.put("/users/:id", updateUsers)
 
 module.exports = router
+
